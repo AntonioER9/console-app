@@ -2,7 +2,7 @@ import yargs, { options } from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
 
-export const yarg = yargs(hideBin(process.argv) )
+export const yarg = yargs(hideBin(process.argv))
   .option('b', {
     alias: 'base',
     type: 'number',
@@ -21,7 +21,7 @@ export const yarg = yargs(hideBin(process.argv) )
     default: false,
     describe: 'Show multiplication table'
   })
-  .option('n',{
+  .option('n', {
     alias: 'name',
     type: 'string',
     default: 'multiplication-table',
@@ -33,9 +33,9 @@ export const yarg = yargs(hideBin(process.argv) )
     default: 'outputs',
     describe: 'File destination'
   })
-  .check(( argv, options ) => { //validación del campo b
+  .check((argv, options) => { //validación del campo b
 
-    if ( argv.b < 1 ) throw 'Error: base must be greater than 0';
+    if (argv.b < 1) throw 'Error: base must be greater than 0';
 
     return true;
   })
