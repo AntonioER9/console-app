@@ -1,7 +1,7 @@
 #Node-ts-console-app
 
 1. Instalar dependencias
-
+```
 npm install
 ```
 
