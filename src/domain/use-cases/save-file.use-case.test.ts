@@ -17,7 +17,6 @@ describe('SaveFileUseCase', () => {
   //   jest.clearAllMocks();
   // });
 
-
   afterEach(() => {
     const outputFolderExists = fs.existsSync('outputs');
     if ( outputFolderExists ) fs.rmSync('outputs', { recursive: true });
@@ -43,7 +42,6 @@ describe('SaveFileUseCase', () => {
     expect( fileExists ).toBe( true );
     expect( fileContent ).toBe( options.fileContent );
     
-
   });
 
 
@@ -90,7 +88,5 @@ describe('SaveFileUseCase', () => {
 
     writeFileSpy.mockRestore();
   });
-
-
 
 });
